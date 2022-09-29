@@ -1,5 +1,10 @@
 # Welcome to SMELP
 
+DISCLAIMER:
+This is an experimental design and will provide better UI improvements in future releases
+
+
+
 
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -65,4 +70,12 @@ We can put our next steps here after discussing them so that they can see we are
 
 
 *Pick out dependencies and install them
-Get with Josh or David to get a refresher of pull/merge requests and GitHub.
+## Dependencies
+express - web framework
+dotenv - create environment variables
+mongoose - odm to database
+colors - helps me stay organized when working in terminal
+bcryptjs - for hashing passwords
+
+## Dev Dependencies
+nodemon - 
