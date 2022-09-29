@@ -8,4 +8,7 @@ app.get('/', (req, res) => {
   res.send('Welcome to the SMELP API!')
 })
 
+//Routes
+app.use('/api/users', require('./routes/userRoutes'))
+
 app.listen(PORT, () => console.log(`Server started on port ${PORT}`))
