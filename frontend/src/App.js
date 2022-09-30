@@ -1,6 +1,11 @@
 import React from 'react';
 import logo from './logo.svg';
+import { CssBaseline, Grid } from '@material-ui/core';
+
 import { Counter } from './features/counter/Counter';
+import Header from './components/Header/Header';
+import List from './components/List/List';
+import Map from './components/Map/Map';
 import './App.css';
 
 function App() {
