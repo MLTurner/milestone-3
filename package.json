@@ -1,36 +1,53 @@
 {
-  "name": "milestone-3",
-  "version": "1.0.0",
-  "description": "Milestone 3 Project",
-  "main": "server.js",
-  "scripts": {
-    "start": "node backend/server.js",
-    "server": "nodemon backend/server.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/MGWr6/milestone-3.git"
-  },
-  "author": "Mason Wagoner and Marissa Turner",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/MGWr6/milestone-3/issues"
-  },
-  "homepage": "https://github.com/MGWr6/milestone-3#readme",
+  "name": "frontend",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.12.4",
-    "@material-ui/icons": "^4.11.3",
-    "@material-ui/lab": "^4.0.0-alpha.61",
-    "@react-google-maps/api": "^2.13.1",
-    "axios": "^0.27.2",
+    "@emotion/react": "^11.10.4",
+    "@emotion/styled": "^11.10.4",
+    "@mui/icons-material": "^5.10.6",
+    "@mui/material": "^5.10.7",
+    "@reduxjs/toolkit": "^1.8.5",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "bcryptjs": "^2.4.3",
     "colors": "^1.4.0",
     "dotenv": "^16.0.3",
     "express": "^4.18.1",
     "express-async-handler": "^1.2.0",
     "jsonwebtoken": "^8.5.1",
-    "google-map-react": "^2.2.0",
-    "mongoose": "^6.6.2"
+    "mongoose": "^6.6.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-redux": "^8.0.4",
+    "react-scripts": "5.0.1",
+    "web-vitals": "^2.1.4"
+  },
+  "scripts": {
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   },
   "devDependencies": {
     "nodemon": "^2.0.20"
