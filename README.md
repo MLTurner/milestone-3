@@ -75,8 +75,9 @@ express - web framework
 dotenv - create environment variables
 mongoose - odm to database
 colors - helps me stay organized when working in terminal
-bcryptjs - for hashing passwords
+bcryptjs - for hashing passwords ref(https://www.npmjs.com/package/bcrypt)
 express-async-handler - "Simple middleware for handling exceptions inside of async express routes and passing them to your express error handlers"  ref(https://github.com/Abazhenov/express-async-handler)
+jsonwebtoken
 
 ## Dev Dependencies
 nodemon - refreshes server when changes are made
