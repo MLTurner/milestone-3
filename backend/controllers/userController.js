@@ -70,18 +70,29 @@ const loginUser = asyncHandler(async (req, res) => {
   }
 });
 
+// Get current user, /api/users/me (PRIVATE ROUTE)
+const getMe = asyncHandler(async (req, res) => {
+  const user = {
+    id: req.user._id,
+    email: req.user.email,
+    name: req.user.name,
+  };
+  res.status(200).json(user);
+});
+
 // Generate Token
 const generateToken = (id) => {
   return jwt.sign({ id }, process.env.JWT_SECRET, { expiresIn: '30d' });
 };
- /*ref: https://www.npmjs.com/package/jsonwebtoken
+/*ref: https://www.npmjs.com/package/jsonwebtoken
  jwt.sign({
  data: 'foobar'
  }, 'secret', { expiresIn: '1h' }); */
 
- // Basically, this allows us to create a JWT. We can test this by deleting the user data in Compass, and registering again. This will generate an encrypted "token". Somewhere in all of that is our actual "_id". We can verify that this token is active by going to jwt.io, pasting the token in and it returns a payload id. That id should match perfectly the assigned _id in our database.
+// Basically, this allows us to create a JWT. We can test this by deleting the user data in Compass, and registering again. This will generate an encrypted "token". Somewhere in all of that is our actual "_id". We can verify that this token is active by going to jwt.io, pasting the token in and it returns a payload id. That id should match perfectly the assigned _id in our database.
 
 module.exports = {
   registerUser,
   loginUser,
+  getMe,
 };
