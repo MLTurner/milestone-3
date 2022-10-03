@@ -1,42 +1,38 @@
-import React from "react";
-import { Autocomplete } from "@react-google-maps/api";
-import { AppBar, Toolbar, Typography, InputBase, Box } from "@material-ui/core";
-import SearchIcon from '@material-ui/icons/Search';
+import React from 'react';
+// import { Autocomplete } from '@react-google-maps/api';
+import { AppBar, Toolbar, Typography, InputBase, Box} from '@mui/material';
+import { Search } from '@mui/icons-material';
 
-//Typography is every text element, but you can change the variants (headings, subtitles and titles)
-//useStyles is a hook
-import useStyles from './headerStyles'
+import styled from './headerStyles';
+
 
 
 const Header = () => {
-    const classes = useStyles();
+    const classes = styled();
 
-    return(
+    return (
         <AppBar position="static">
-            <Toolbar className={classes.Toolbar}>
-                <Typography variant="h5" className={classes.title}>
-                    SMELP
+            <Toolbar className={classes.toolbar}>
+                <Typography variant="h5" className={classes.title}> 
+                {/* Typography is every text element but you can assign the variant. */}
+                    Welcome to the SMELP App
                 </Typography>
                 <Box display="flex">
-                    <Typography variant="h6" className={classes.title}>
-                    Explore Gas Stations/Rest Stops
-                    </Typography>
-                    <Autocomplete>
-                        <div className={classes.search}>
-                            <div className={classes.searchIcon}>
-                                <SearchIcon />
-                            </div>
-                            {/* classes is equal to an object because we want to add multiple classes*/}
-                            <InputBase placeholder="Search..." classes={{
-                                root: classes.inputRoot,
-                                input: classes.inputInput
-                                }} />
+                <Typography variant="h6" className={classes.title}>
+                     Explore new places
+                </Typography>
+                {/* <Autocomplete> */}
+                    <div className={classes.search}>
+                        <div className={classes.searchIcon}>
+                            <Search />
                         </div>
-                    </Autocomplete>
+                        <InputBase placeholder='Search...' classes={{ root: classes.inputRoot, input: classes.inputInput }} />
+                    </div>
+                {/* </Autocomplete> */}
                 </Box>
             </Toolbar>
         </AppBar>
-    );
+    )
 }
 
 export default Header;
