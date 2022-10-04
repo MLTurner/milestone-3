@@ -1,4 +1,4 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@mui/material";
 //callback function inside returns an object
 //class name title, which is an object
 export default makeStyles(() => ({
