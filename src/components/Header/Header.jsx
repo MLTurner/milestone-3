@@ -1,7 +1,8 @@
 import React from "react";
 import { Autocomplete } from "@react-google-maps/api";
-import { AppBar, Toolbar, Typography, InputBase, Box } from "@material-ui/core";
-import SearchIcon from '@material-ui/icons/Search';
+import { AppBar, Autocomplete, Toolbar, Typography, InputBase, Box } from "@mui/material";
+import MenuIcon from '@mui/icons-material/Menu'
+import Icon from '@mui/material/Icon'
 
 //Typography is every text element, but you can change the variants (headings, subtitles and titles)
 //useStyles is a hook
@@ -10,7 +11,7 @@ import useStyles from './headerStyles'
 
 const Header = () => {
     const classes = useStyles();
-
+//AppBar, Box components up to date
     return(
         <AppBar position="static">
             <Toolbar className={classes.Toolbar}>
@@ -24,7 +25,7 @@ const Header = () => {
                     <Autocomplete>
                         <div className={classes.search}>
                             <div className={classes.searchIcon}>
-                                <SearchIcon />
+                                <Icon />
                             </div>
                             {/* classes is equal to an object because we want to add multiple classes*/}
                             <InputBase placeholder="Search..." classes={{
