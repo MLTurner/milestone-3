@@ -1,6 +1,6 @@
 import { alpha, styled } from "@mui/material/styles";
 
-export default styled((theme) => ({
+export default useStyles((theme) => ({
   title: {
     display: 'none',
     [theme.breakpoints.up('sm')]: {
