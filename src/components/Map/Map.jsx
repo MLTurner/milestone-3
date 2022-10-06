@@ -1,8 +1,8 @@
 import React from "react";
 import googleMapReact from "google-map-react";
-import { Paper, Typography, useMediaQuery } from "@mui/material";
-import Rating from '@material-ui/lab'
-import useStyles from './styles'
+import { Paper, Typography, useMediaQuery, styled } from "@mui/material";
+
+
 
 
 const Map = () => {
