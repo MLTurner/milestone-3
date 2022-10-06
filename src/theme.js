@@ -1,10 +1,6 @@
-import {createTheme} from '@mui/material';
+import { createTheme } from "@mui/material";
 
-
- 
-
-
-const headerTheme = createTheme({
+export const theme = createTheme({
     palette:{
         primary:{
             main: "#58C790",
@@ -20,6 +16,4 @@ const headerTheme = createTheme({
             lightYellow: "#FEFFB3"
         }
     }
-});
-
-export default headerTheme;
+})
