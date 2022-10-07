@@ -1,9 +1,6 @@
 import {createTheme} from '@mui/material';
 
 
- 
-
-
 const headerTheme = createTheme({
     palette:{
         primary:{

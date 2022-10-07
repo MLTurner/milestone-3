@@ -1,3 +1,5 @@
+import {createTheme} from '@mui/material';
+
 import { makeStyles } from "@mui/material";
 //callback function inside returns an object
 //class name title, which is an object
