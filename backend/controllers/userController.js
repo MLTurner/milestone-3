@@ -4,7 +4,7 @@ const jwt = require('jsonwebtoken');
 
 const User = require('../models/userModel');
 
-// Register a new user, /api/users/register
+// Register a new user, /api/users/
 const registerUser = asyncHandler(async (req, res) => {
   const { name, email, password } = req.body;
 
