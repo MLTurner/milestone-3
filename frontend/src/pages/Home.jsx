@@ -5,16 +5,16 @@ function Home() {
   return (
     <>
       <section className="heading">
-        <h1>What would you like to do?</h1>
+        <h1>What do you need help with?</h1>
         <p>Please choose from an option below</p>
       </section>
 
-      <Link to='/new-review' className='btn btn-reverse btn-block'>
-        <FaQuestionCircle /> Create New Review
+      <Link to='/new-ticket' className='btn btn-reverse btn-block'>
+        <FaQuestionCircle /> Create New Ticket
       </Link>
 
-      <Link to='/reviews' className='btn btn-block'>
-        <FaTicketAlt /> View My Reviews
+      <Link to='/tickets' className='btn btn-block'>
+        <FaTicketAlt /> View My Tickets
       </Link>
     </>
   );
