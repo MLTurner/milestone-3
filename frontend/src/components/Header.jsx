@@ -16,7 +16,6 @@ function Header() {
 
   return (
       <header className='header'>
-        {/* Marissa's header code here, pay attention to logout, login, register redux tools */}
         <div className='logo'>
           <Link to='/'>Smelp App</Link>
         </div>
