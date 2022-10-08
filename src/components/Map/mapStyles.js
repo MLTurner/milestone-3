@@ -1,14 +1,33 @@
-import {createTheme} from '@mui/material';
+import {makeStyles} from 'material-ui/core';
 
-import { makeStyles } from "@mui/material";
-//callback function inside returns an object
-//class name title, which is an object
+
 export default makeStyles(() => ({
-    paper: {
-        padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center',
+palette:{
+        primary:{
+            main: "#58C790",
+            light: "#99F4C8"
+        },
+        secondary:{
+            main: "#FDFC9B",
+            light: "#FEFFB3"
+        },
+        triColor:{
+            lightGreen: "#99F4C8",
+            lightBlue: "#A1F0ED",
+            lightYellow: "#FEFFB3"
+        }
     },
-    mapContainer: {
-        height: '85vh', width: '100%'
-    }
+    paper: {
+        padding: '10px', display: 'flex', flexDirection: 'column', justifyContent: 'center', width: '100px',
+      },
+      mapContainer: {
+        height: '85vh', width: '100%',
+      },
+      markerContainer: {
+        position: 'absolute', transform: 'translate(-50%, -50%)', zIndex: 1, '&:hover': { zIndex: 2 },
+      },
+      pointer: {
+        cursor: 'pointer',
+      },
 }))
-//will finish css for map
+
