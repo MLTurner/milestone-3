@@ -1,19 +1,50 @@
-import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useState, useEffect } from 'react';
+import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import { createReview, reset } from '../features/reviews/reviewSlice';
+import Spinner from '../components/Spinner';
+import BackButton from '../components/BackButton';
 
 function NewReview() {
   const { user } = useSelector((state) => state.auth);
-  const [name] = useState(user.name);
-  const [email] = useState(user.email);
-  const [category, setCategory] = useState('Bathroom');
-  const [description, setDescription] = useState('');
+  const { isLoading, isError, isSuccess, message } = useSelector((state) => state.review)
+
+  const [ name ] = useState(user.name);
+  const [ email ] = useState(user.email);
+  const [ category, setCategory ] = useState('Bathroom');
+  const [ description, setDescription ] = useState('');
+
+  const dispatch = useDispatch()
+  const navigate = useNavigate()
+
+  useEffect(() => {
+    if(isError) {
+      toast.error(message)
+    }
+
+    if(isSuccess) {
+      dispatch(reset())
+      navigate('/reviews')
+    }
+
+    dispatch(reset())
+  }, [dispatch, isError, isSuccess, navigate, message])
+
 
   const onSubmit = (e) => {
     e.preventDefault();
+    dispatch(createReview({category, description}))
   };
+
+
+  if(isLoading) {
+    return <Spinner />
+  }
 
   return (
     <>
+    <BackButton url='/' />
       <section className='heading'>
         <h1>Create New Review</h1>
         <p>Please fill out the form below</p>
@@ -22,11 +53,11 @@ function NewReview() {
       <section className='form'>
         <div className='form-group'>
           <label htmlFor='name'>Customer Name</label>
-          <input type='text' classname='form-control' value={name} disabled />
+          <input type='text' className='form-control' value={name} disabled />
         </div>
         <div className='form-group'>
           <label htmlFor='email'>Customer Email</label>
-          <input type='text' classname='form-control' value={email} disabled />
+          <input type='text' className='form-control' value={email} disabled />
         </div>
         <form onSubmit={onSubmit}>
           <div className='form-group'>

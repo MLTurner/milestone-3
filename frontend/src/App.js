@@ -7,6 +7,7 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import NewReview from './pages/NewReview';
+import Reviews from './pages/Reviews';
 import PrivateRoute from './components/PrivateRoute';
 
 function App() {
@@ -21,6 +22,9 @@ function App() {
             <Route path='/register' element={<Register />} />
             <Route path='/new-review' element={<PrivateRoute />}>
               <Route path='/new-review' element={<NewReview />} />
+            </Route>
+            <Route path='/reviews' element={<PrivateRoute />}>
+              <Route path='/reviews' element={<Reviews />} />
             </Route>
           </Routes>
         </div>
