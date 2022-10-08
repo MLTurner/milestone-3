@@ -8,7 +8,7 @@ import BackButton from '../components/BackButton';
 
 function NewReview() {
   const { user } = useSelector((state) => state.auth);
-  const { isLoading, isError, isSuccess, message } = useSelector((state) => state.review)
+  const { isLoading, isError, isSuccess, message } = useSelector((state) => state.reviews)
 
   const [ name ] = useState(user.name);
   const [ email ] = useState(user.email);

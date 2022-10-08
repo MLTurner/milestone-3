@@ -3,6 +3,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { getReviews, reset } from '../features/reviews/reviewSlice';
 import Spinner from '../components/Spinner';
 import BackButton from '../components/BackButton';
+import ReviewItem from '../components/ReviewItem';
 
 function Reviews() {
   const { reviews, isLoading, isSuccess } = useSelector((state) => state.reviews)
@@ -31,9 +32,21 @@ function Reviews() {
 
 
   return (
-    <div>
-      <h1>Reviews Page</h1>
-    </div>
+    <>
+      <BackButton url='/' />
+      <h1>Reviews</h1>
+      <div className='reviews'>
+        <div className="review-headings">
+          <div>Date</div>
+          <div>Category</div>
+          <div>Status</div>
+          <div></div>
+        </div>
+        {reviews.map((review) => (
+          <ReviewItem key={review._id} review={review} />
+        ))}
+      </div>
+    </>
   )
 }
 
