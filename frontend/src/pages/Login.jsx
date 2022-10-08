@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { FaSignInAlt } from 'react-icons/fa';
 import { useSelector, useDispatch } from 'react-redux';
 import { login, reset } from '../features/auth/authSlice';
-import Spinner from '../components/spinner';
+import Spinner from '../components/Spinner';
 
 
 
