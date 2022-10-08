@@ -1,5 +1,6 @@
 const mongoose = require('mongoose');
 
+// edit review schema to reflect what we want the user to be able to review (beta)
 const reviewSchema = mongoose.Schema(
   {
     user: {
@@ -7,10 +8,10 @@ const reviewSchema = mongoose.Schema(
       required: true,
       ref: 'User'
     },
-    product: {
+    category: {
       type: String,
-      required: [true, 'Please select a product'],
-      enum: ['iPhone', 'Macbook Pro', 'iMac', 'iPad'],
+      required: [true, 'Please select a category'],
+      enum: ['Bathroom', 'Service', 'Safety', 'Hot Food'],
     },
     description: {
       type: String,
