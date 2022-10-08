@@ -1,4 +1,4 @@
-// this will be out Schema
+// this will be our Schema
 const mongoose = require('mongoose');
 
 const userSchema = mongoose.Schema(
